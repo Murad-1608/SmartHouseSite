@@ -1,0 +1,30 @@
+﻿@model List<Entity.Concrete.Category>
+
+<div class="col-lg-3 order-2 order-lg-1">
+    <div class="sidebar-wrapper">
+        <div class="sidebar-single">
+            <div class="input-group mb-3">
+                <form method="get" asp-controller="product" asp-action="index">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="sidebar-single">
+            <div class="sidebar-title">
+                <h3 style="color:white">Kateqoriyalar</h3>
+            </div>
+            <div class="sidebar-body">
+                <ul class="color-list">
+                    @*<li><a href="#">Mens <span>(10)</span></a></li>*@
+                    @foreach (var item in Model)
+                    {
+                        <li><a href="/product/filterbycategory?categoryId=@item.Id" style="color:white">@item.Name</a></li>
+                    }
+                </ul>
+            </div>
+        </div>        
+    </div>
+</div>

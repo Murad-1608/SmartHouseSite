@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Sosyal mediya";
+}
+@model WebUI.Areas.Admin.Models.ContactModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<div class="card-body">
+    <h3>Sosyal mediya</h3>
+    <br />
+    @if (TempData["SuccessedMessage"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["SuccessedMessage"]
+        </div>
+    }
+
+    <form class="forms-sample" asp-controller="contact" asp-action="update" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="hidden" asp-for="Id" />
+            <label for="exampleInputName1">Tiktok</label>
+            <input type="text" asp-for="Tiktok" class="form-control" id="exampleInputName1" placeholder="">
+            <span asp-validation-for="Tiktok" class="text-danger"></span>
+            <br />
+            <label for="exampleInputName1">LinkedIn</label>
+            <input type="text" asp-for="LinkedIn" class="form-control" id="exampleInputName1" placeholder="">
+            <span asp-validation-for="LinkedIn" class="text-danger"></span>
+            <br />
+            <label for="exampleInputName1">Telegram</label>
+            <input type="text" asp-for="Telegram" class="form-control" id="exampleInputName1" placeholder="">
+            <span asp-validation-for="Telegram" class="text-danger"></span>
+            <br />
+            <label for="exampleInputName1">Whatsapp</label>
+            <input type="text" asp-for="Whatsapp" class="form-control" id="exampleInputName1" placeholder="">
+            <span asp-validation-for="Whatsapp" class="text-danger"></span>
+            <br />
+            <label for="exampleInputName1">Instagram</label>
+            <input type="text" asp-for="Instagram" class="form-control" id="exampleInputName1" placeholder="">
+            <span asp-validation-for="Whatsapp" class="text-danger"></span>
+            <br />
+            <label for="exampleInputName1">Facebook</label>
+            <input type="text" asp-for="Facebook" class="form-control" id="exampleInputName1" placeholder="">
+            <span asp-validation-for="Facebook" class="text-danger"></span>
+            <br />
+            <label for="exampleInputName1">YouTube</label>
+            <input type="text" asp-for="Youtube" class="form-control" id="exampleInputName1" placeholder="">
+            <span asp-validation-for="Youtube" class="text-danger"></span>
+            <br />
+            <button type="submit" class="btn btn-info">Yenilə</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

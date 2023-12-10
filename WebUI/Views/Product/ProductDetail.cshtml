@@ -1,0 +1,125 @@
+﻿@model Entity.Concrete.Product
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="meta description">
+<title>@ViewData["Title"] | SmartSystem</title>
+<!--=== Favicon ===-->
+<link rel="shortcut icon" href="~/juan/assets/img/favicon.ico" type="image/x-icon" />
+<!--=== All Plugins CSS ===-->
+<link href="~/juan/assets/css/plugins.css" rel="stylesheet">
+<!--=== All Vendor CSS ===-->
+<link href="~/juan/assets/css/vendor.css" rel="stylesheet">
+<!--=== Main Style CSS ===-->
+<link href="~/juan/assets/css/style.css" rel="stylesheet">
+<!-- Modernizer JS -->
+<script src="~/juan/assets/js/modernizr-2.8.3.min.js"></script>
+<style>
+    body {
+        background-color: #071e22;
+        color: white;
+    }
+
+    h1, h3, span {
+        color: white;
+    }
+</style>
+<!--[if lt IE 9]>
+<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- Start Header Area -->
+<!-- end Header Area -->
+<!-- off-canvas menu start -->
+<!-- off-canvas menu end -->
+<!-- main wrapper start -->
+<br />
+<br />
+<main>
+    <!-- breadcrumb area start -->
+    <div class="breadcrumb-area bg-img" data-bg="~/juan/~/juan/assets/img/banner/breadcrumb-banner.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb-wrap text-center">
+                        <nav aria-label="breadcrumb">
+                            <h1 class="breadcrumb-title">Məhsul haqqında</h1>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb area end -->
+    <!-- product details wrapper start -->
+    <div class="product-details-wrapper section-padding">
+        <div class="container custom-container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- product details inner end -->
+                    <div class="product-details-inner">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="product-large-slider mb-20">
+
+                                    @if (Model.Images.Count != 0)
+                                    {
+                                        foreach (var item in Model.Images)
+                                        {
+                                            <div class="pro-large-img img-zoom">
+                                                <img src="~/Images/Product/@item.Name" alt="" style="Object-fit: cover; width: 400px; height: 410px" />
+                                            </div>
+                                        }
+                                    }
+                                    <div class="pro-large-img img-zoom">
+                                        <img src="~/Images/Product/@Model.PhotoUrl" alt="" style="Object-fit: cover; width: 400px; height: 410px" />
+                                    </div>
+                                </div>
+                                <div class="pro-nav slick-row-5">
+                                    @if (Model.Images.Count != 0)
+                                    {
+                                        foreach (var item in Model.Images)
+                                        {
+                                            <div class="pro-nav-thumb"><img src="~/Images/Product/@item.Name" alt="" style="Object-fit: cover; width:110px; height:114.06px" /></div>
+                                        }
+                                    }
+                                    <div class="pro-nav-thumb"><img src="~/Images/Product/@Model.PhotoUrl" alt="" style="Object-fit: cover; width:110px; height:114.06px" /></div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="product-details-des">
+                                    <h3 class="pro-det-title">@Model.Name</h3>
+                                    <p style="white-space: pre-line">
+                                        @Model.Description
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product details inner end -->
+                    <!-- product details reviews start -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- product details wrapper end -->
+</main>
+<!-- main wrapper end -->
+<!-- Quick view modal start -->
+<!-- Scroll to Top End -->
+<!--=======================Javascript============================-->
+<!--=== All Vendor Js ===-->
+<script src="~/juan/assets/js/vendor.js"></script>
+<!--=== All Plugins Js ===-->
+<script src="~/juan/assets/js/plugins.js"></script>
+<!--=== Active Js ===-->
+<script src="~/juan/assets/js/active.js"></script>

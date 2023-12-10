@@ -1,0 +1,129 @@
+/* Global styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+
+    background-color: #141414;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Container styles */
+.contactContainer {
+  
+    max-width: 736px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Title styles */
+.title {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+/* Row and List styles */
+.row-smedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+
+    .row-smedia li {
+        display: inline-block;
+        margin: 0px 8px 30px 8px;
+    }
+
+    .row-smedia svg {
+        transition: transform 0.3s ease;
+        color: #F184FF;
+    }
+
+        .row-smedia svg:hover {
+            transform: scale(1.1);
+        }
+
+/* Logo styles */
+.logo img {
+    max-width: 96px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    margin-top:110px
+}
+
+/* Column styles for social media links */
+.column-smedia {
+    text-align: center;
+    padding: 0 8px;
+}
+
+    .column-smedia a {
+        color: white;
+        display: block;
+        font-size: 18px;
+        text-decoration: none;
+        border: 1px white solid;
+        margin-bottom: 16px;
+        padding: 16px 44px;
+        border-radius: 45px;
+        transition: all 0.3s linear;
+    }
+
+        .column-smedia a:hover {
+            color: black;
+            background-color: white;
+        }
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+    .container {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .row-smedia li {
+        margin: 0px 8px 5px 8px;
+    }
+
+    .row-smedia svg {
+        transition: transform 0.3s ease;
+        color: #F184FF;
+        width: 25px;
+        height: 25px;
+    }
+
+
+    .logo img {
+        max-width: 64px;
+    }
+
+    .column-smedia {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+        .column-smedia a {
+            font-size: 18px;
+            margin-bottom: 12px;
+            padding: 12px 36px;
+        }
+}

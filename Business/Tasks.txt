@@ -1,0 +1,4 @@
+﻿1) ProductUpdates in AdminPanel
+2) AboutUs
+3) Contact
+4) Footer

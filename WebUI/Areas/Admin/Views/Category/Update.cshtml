@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Kateqoriya yenilə";
+}
+@model WebUI.Areas.Admin.ViewModels.CategoryUpdateViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<div class="card-body">
+    <h3>Kateqoriya yenilə</h3>
+    <br />
+    @if (TempData["SuccessedMessage"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["SuccessedMessage"]
+        </div>
+    }
+    <form class="forms-sample" asp-controller="category" asp-action="update" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="hidden" asp-for="Id" />
+            <label for="exampleInputName1">Kateqoriya</label>
+            <input type="text" asp-for="Name" class="form-control" id="exampleInputName1" placeholder="">
+            <span asp-validation-for="Name" class="text-danger"></span>
+            <br />
+            <label for="exampleInputName1">Məlumat</label>
+            <textarea type="text" asp-for="Information" class="form-control" id="exampleInputName1" placeholder="" style="height:150px"></textarea>
+            <span asp-validation-for="Information" class="text-danger"></span>
+            <br />
+            <button type="submit" class="btn btn-info">Təstiqlə</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

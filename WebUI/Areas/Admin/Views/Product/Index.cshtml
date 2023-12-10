@@ -1,0 +1,48 @@
+﻿@using Entity.Concrete;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<Product>
+@{
+    ViewData["Title"] = "Məhsul";
+}
+
+<h2>Məhsullar</h2>
+<table id="example" class="table table-striped">
+    <thead>
+        <tr>
+            <th>№</th>
+            <th>Ad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <tr>
+                <td>@(i + 1)</td>
+                <td>@Model[i].Name</td>
+                <td>
+                    <a asp-controller="product" asp-action="delete" asp-route-id="@Model[i].Id" class="btn btn-danger" onclick="return confirm('Silmək istəyirsiniz?')">Sil</a>
+                </td>
+
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+<br />
+
+
+<a href="/admin/product/add" class="btn btn-info">Yeni məhsul yarat</a>
+
+@if (TempData["SuccessedMessage"] != null)
+{
+    <script>
+        swal("@TempData["SuccessedMessage"]", "", "success");
+    </script>
+}
+
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+</script>
