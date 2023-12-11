@@ -292,7 +292,7 @@ a {
             }
 
             .owl-theme .owl-dots .owl-dot.active span {
-                background-color: #1B1B1B;
+                background-color: white;
                 width: 25px;
             }
 
@@ -440,7 +440,7 @@ a {
 
             .navbar-b.navbar-trans .nav-link:hover,
             .navbar-b.navbar-reduce .nav-link:hover {
-                color: #1B1B1B;
+                color: white;
             }
 
                 .navbar-b.navbar-trans .nav-link:hover:before,
@@ -482,30 +482,30 @@ a {
     }
 
         .navbar-b.navbar-reduce .nav-link {
-            color: #0078ff;
+            color: white;
         }
 
             .navbar-b.navbar-reduce .nav-link:before {
-                background-color: #0078ff;
+                background-color: white;
             }
 
             .navbar-b.navbar-reduce .nav-link:hover {
-                color: #0078ff;
+                color: white;
             }
 
             .navbar-b.navbar-reduce .show > .nav-link,
             .navbar-b.navbar-reduce .active > .nav-link,
             .navbar-b.navbar-reduce .nav-link.show,
             .navbar-b.navbar-reduce .nav-link.active {
-                color: #0078ff;
+                color: white;
             }
 
         .navbar-b.navbar-reduce .navbar-brand {
-            color: #0078ff;
+            color: white;
         }
 
         .navbar-b.navbar-reduce .navbar-toggler span {
-            background-color: #1B1B1B;
+            background-color: white;
         }
 
     .navbar-b .navbar-brand {
@@ -523,7 +523,7 @@ a {
     }
 
     .navbar-b .dropdown-menu {
-        margin: 1.12rem 0 0;
+        /*margin: 1.12rem 0 0;*/
         border-radius: 0;
     }
 
