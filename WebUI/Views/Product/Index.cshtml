@@ -26,6 +26,100 @@
     .product-item {
         border-radius: 10px;
     }
+    .news-ticker {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    #ticker-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        animation: ticker-animation 5s linear infinite; /* Adjust the duration as needed */
+    }
+
+    @@keyframes ticker-animation {
+        100% {
+            transform: translateX(500%);
+        }
+
+        0% {
+            transform: translateX(-100%);
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 15px;
+        position: relative;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        padding: 10px;
+    }
+
+    li:hover .submenu {
+        display: block;
+    }
+
+    @@media screen and (max-width: 600px) {
+        .nav-item {
+            display: block;
+            width: 100%;
+        }
+
+        .submenu {
+            display: none;
+        }
+
+            .submenu.show {
+                display: block;
+            }
+
+            .submenu a {
+                padding: 8px 16px;
+            }
+    }
+
+    .subMenuOpen {
+        height: auto;
+    }
+
+    .drop-icon {
+        border-radius: 50%;
+        width: 1em;
+        height: 1em;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.125);
+        text-shadow: 0 0 0 transparent;
+        color: rgba(255, 255, 255, 0.75);
+        float: right;
+    }
+
+    .dropdown-menu {
+        background-color: #071E22;
+    }
+
+    .dropdown-item {
+        color: white;
+    }
 </style>
 <!-- Start Header Area -->
 <!-- end Header Area -->

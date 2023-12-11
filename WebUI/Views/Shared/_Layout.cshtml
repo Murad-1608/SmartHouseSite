@@ -6,7 +6,7 @@
     <title>@ViewData["Title"] | SmartSystem</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="Ağıllı ev, bina idarəetmə sistemləri" name="description">
 
     <!-- Favicons -->
     <link href="~/Vitrin/img/TitleIcon.png" rel="icon" type="image/x-icon">
@@ -38,6 +38,7 @@
     ======================================================= -->
 
     <style>
+        
         .news-ticker {
             overflow: hidden;
             white-space: nowrap;
@@ -91,7 +92,7 @@
             display: block;
         }
 
-        @@media screen and (max-width: 600px) {
+       /* @@media screen and (max-width: 600px) {
             .nav-item {
                 display: block;
                 width: 100%;
@@ -108,7 +109,7 @@
                 .submenu a {
                     padding: 8px 16px;
                 }
-        }
+        }*/
 
         .subMenuOpen {
             height: auto;
@@ -124,6 +125,13 @@
             color: rgba(255, 255, 255, 0.75);
             float: right;
         }
+        .dropdown-menu {
+            background-color: #071E22;
+        }
+        .dropdown-item{
+             color: white;
+        }
+
     </style>
 </head>
 
@@ -133,7 +141,7 @@
     <!--/ Nav Star /-->
     <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav" style="background-color: #071e22">
         <div class="container">
-            <a class="navbar-brand js-scroll" style="color: #71717f; font-family: Poppins " asp-controller="home" asp-action="index">SmartSystem.az</a>
+            <a class="navbar-brand js-scroll" style="color: #71717f; font-family: Poppins" asp-controller="home" asp-action="index">SmartSystem.az</a>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
                     aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
@@ -145,25 +153,21 @@
                     <li class="nav-item">
                         <a style="color:white; font-family: Poppins" class="nav-link js-scroll" href="/home">Ana səhifə</a>
                     </li>
-                    <li class="nav-item">
-                        <a style="color: white; font-family: Poppins" class="nav-link js-scroll" href="#">Xidmətlərimiz <span class="drop-icon">▾</span></a>
-
-                        @*<label for="tm" id="toggle-menu">Xidmətlərimiz <span class="drop-icon">▾</span></label>*@
-                        <div class="submenu">
-                            <ul>
-                                <li><a href="/service/smarthome">Ağllı şəhər</a></li>
-                            </ul>
+                    <li class="nav-item dropdown">
+                        <a style="color: white; font-family: Poppins" class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Xidmətlərimiz <span class="drop-icon">▾</span></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/service/smarthome" data-toggle="false">Ağllı şəhər</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown subMenuOpen">
-                        <a style="color: white; font-family: Poppins" class="nav-link js-scroll" href="#">Haqqımızda <span class="drop-icon">▾</span></a>
-                        <ul class="submenu">
-                            <li><a href="/aboutus/">Haqqımızda</a></li>
-                            <li><a href="/portfolio/">Görülən işlər</a></li>
-                            <li><a href="/certificate/">Sertifikatlar</a></li>
-                        </ul>
+                    <li class="nav-item dropdown">
+                        <a style="color: white; font-family: Poppins" class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Haqqımızda <span class="drop-icon">▾</span></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/aboutus/">Haqqımızda</a>
+                            <a class="dropdown-item" href="/portfolio/">Görülən işlər</a>
+                            <a class="dropdown-item" href="/certificate/">Sertifikatlar</a>
+                        </div>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a style="color: white; font-family: Poppins" class="nav-link js-scroll" href="/product">Məhsullar</a>
                     </li>
                     <li class="nav-item">
@@ -171,8 +175,6 @@
                     </li>
                 </ul>
             </div>
-
-
         </div>
 
         @*<div class="news-ticker">
