@@ -4,7 +4,7 @@ namespace Business.Abstract
 {
     public interface IAboutUsService
     {
-        Task<AboutUs> GetAbout();
-        
+        AboutUs GetAbout();
+        Task Update(AboutUs aboutUs);
     }
 }

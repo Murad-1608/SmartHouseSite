@@ -1,12 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Haqqımızda";
 }
+@model Entity.Concrete.AboutUs
 <style>
     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
     .aboutContainer {
         margin-top: 120px;
@@ -20,70 +21,19 @@
         gap: 10px;
     }
 
-.aboutText {
-    width: 600px;
-}
-
-    .aboutText h1 {
-        margin: 20px 0;
-        font-family: Poppins;
-        color: #FFFFFF;
-    }
-
-    .aboutText p {
-        margin: 0 0 20px;
-        font-family: Poppins;
-        font-size: 14px;
-        font-weight: 400;
-        word-spacing: 5px;
-        letter-spacing: 1px;
-        color: #FFFFFF;
-        line-height: 1.8;
-    }
-
-.aboutImage {
-    width: 558px;
-    height: 558px;
-}
-
-.aboutImage img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-@@media only screen and (max-width: 768px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .aboutContainer {
-        padding: 0 15px;
-        width: 100%;
-        margin: 40px 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
     .aboutText {
-        max-width: 600px;
-        width: 100%;
+        width: 600px;
     }
 
         .aboutText h1 {
-            color: #FFFFFF;
             margin: 20px 0;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: Poppins;
+            color: #FFFFFF;
         }
 
         .aboutText p {
             margin: 0 0 20px;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Poppins;
             font-size: 14px;
             font-weight: 400;
             word-spacing: 5px;
@@ -93,65 +43,114 @@
         }
 
     .aboutImage {
-        max-width: 333px;
-        width: 100%;
-        height: auto;
+        width: 558px;
+        height: 558px;
     }
 
         .aboutImage img {
             width: 100%;
-            height: auto;
+            height: 100%;
             border-radius: 50%;
             object-fit: cover;
         }
 
-}
+    @@media only screen and (max-width: 768px) {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-@@media only screen and (max-width: 724px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+        .aboutContainer {
+            padding: 0 15px;
+            width: 100%;
+            margin: 40px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .aboutText {
+            max-width: 600px;
+            width: 100%;
+        }
+
+            .aboutText h1 {
+                color: #FFFFFF;
+                margin: 20px 0;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            .aboutText p {
+                margin: 0 0 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                word-spacing: 5px;
+                letter-spacing: 1px;
+                color: #FFFFFF;
+                line-height: 1.8;
+            }
+
+        .aboutImage {
+            max-width: 333px;
+            width: 100%;
+            height: auto;
+        }
+
+            .aboutImage img {
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
+            }
     }
 
-    .aboutText {
-        width: 100%;
-        margin: 0;
+    @@media only screen and (max-width: 724px) {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .aboutText {
+            width: 100%;
+            margin: 0;
+        }
+
+        .aboutContainer {
+            margin: 80px 10px;
+            margin-left: 0;
+            margin-bottom: 40px;
+            padding: 0 10px;
+        }
+
+        .aboutImage img {
+            width: 333px;
+            height: 333px;
+        }
     }
 
-    .aboutContainer {
-        margin: 80px 10px;
-        margin-left: 0;
-        margin-bottom: 40px;
-        padding: 0 10px;
-    }
+    @@media only screen and (min-width: 769px) and (max-width: 1024px) {
+        .aboutText {
+            width: 541px;
+        }
 
-    .aboutImage img {
-        
-        width: 333px;
-        height: 333px;
-    }
-}
+        .aboutContainer {
+            max-width: 1024px;
+            margin: 80px 10px;
+            margin-left: 0;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+        }
 
-@@media only screen and (min-width: 769px) and (max-width: 1024px) {
-    .aboutText {
-        width: 541px;
+        .aboutImage img {
+            width: 333px;
+            height: 333px;
+        }
     }
-
-    .aboutContainer {
-        max-width: 1024px;
-        margin: 80px 10px;
-        margin-left: 0;
-        margin-bottom: 40px;
-        display: flex;
-        align-items: center;
-    }
-
-    .aboutImage img {
-        width: 333px;
-        height: 333px;
-    }
-}
 </style>
 
 <body>
@@ -159,36 +158,13 @@
 
         <div class="aboutText">
             <h1>Haqqımızda</h1>
-            <p>
-                “ALLSMART TECHNOLOGIES” özündə “ELSMART”, “ACCESSO” kimi yerli texnologiya markalarını birləşdirir.
-                Hüquqi
-                olaraq “ALLSMART TECHNOLOGIES” ağıllı qurğuların istehsalı, Ev – Bina avtomatlaşdırılması sisteminin
-                istehsalı və quraşdırlması, “Ağıllı otel” və “Ağıllı ofis” sistemləri, təhlükəsizlik sistemləri və
-                giriş-çıxışa nəzarət, avtomatik keçid sistemləri, LED lampaların istehsalı istiqamətində fəaliyyət
-                göstərir.
-
-            </p>
-
-            <p>
-                Şirkətimiz hal hazırda 100-dən çox adda məhsul istehsal etməkdədir. Məhsullarımız 2017-ci ildən
-                “ELSMART”
-                ticarət markası adı altında Azarbaycanın ilk və tək Ağıllı Ev və Bina idarəetməsi sistemləri olaraq
-                istehsal
-                edilməkdədir. İstehsal etdiyimiz məhsulların elektron dövrələrinin (PCB) dizaynı şirkətimiz tərəfindən
-                sifarişə uyğun hazırlanır.
-            </p>
-
-            <p>
-                Qurğuların “beyinləri” sayılan mikroçiplərin proqrmlaşdırılmasından mobil (IOS və Android) proqramlamaya
-                qədər bütün proqram yazılımları bizim şirkətin mühəndisləri tərəfindən aparılır. Məhsullarımız 100%
-                yerli
-                mütəxəssislər tərəfindən hazırlanır. Şirkətimiz özəl istəklər əuyğun olaraq fərqli cihaz istehsalı
-                sifarişləri də qəbul edir
+            <p style="white-space: pre-line">
+               @Model.Text
             </p>
 
         </div>
         <div class="aboutImage">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/UmPR6cVsKn8?si=gE6eSFENOLenIfeh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="@Model.YoutubeLink" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             @*<img src="~/AboutUs/about/img/smartHomeAbout.jpg" alt="smart-home" title="smart-home">*@
         </div>
     </div>

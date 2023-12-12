@@ -28,6 +28,9 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<EfPortfolioDal>().As<IPortfolioDal>();
             builder.RegisterType<PortfolioManager>().As<IPortfolioService>();
 
+            builder.RegisterType<EfAboutUsDal>().As<IAboutUsDal>();
+            builder.RegisterType<AboutUsManager>().As<IAboutUsService>();
+
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
             builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces()
