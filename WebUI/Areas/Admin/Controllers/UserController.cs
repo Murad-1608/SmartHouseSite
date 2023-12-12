@@ -56,5 +56,34 @@ namespace WebUI.Areas.Admin.Controllers
 
         }
 
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(ChangePasswordModel model)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            var user = await userManager.FindByNameAsync(User.Identity.Name);
+
+            bool checkPassword = await userManager.CheckPasswordAsync(user, model.Password);
+
+
+            if (!checkPassword)
+            {
+                ModelState.AddModelError(nameof(model.Password), "Parol yanlışdır");
+                return View();
+            }
+            var result = await userManager.ChangePasswordAsync(user, model.Password, model.NewPassword);
+
+            if (result.Succeeded)
+            {
+                TempData["SuccessedMessage"] = "Uğurla yeniləndi";
+            }
+            return View();
+        }
     }
 }
