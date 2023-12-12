@@ -1,7 +1,6 @@
 ﻿using Entity.Concrete;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Emit;
 
 namespace DataAccess.Concrete.EntityFramework
 {

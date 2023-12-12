@@ -20,7 +20,7 @@ namespace Business.Concrete
         public async Task Add(Product product, List<IFormFile> photos)
         {
             await productDal.AddAsync(product);
-            if (photos!=null)
+            if (photos != null)
             {
                 foreach (var item in photos)
                 {
@@ -29,11 +29,10 @@ namespace Business.Concrete
                         ProductId = product.Id,
                         Name = SystemIOOperations.AddPhoto(item, "Product")
                     };
-
                     await imageService.Add(image);
                 }
             }
-            
+
         }
 
         public async Task Delete(string id)
