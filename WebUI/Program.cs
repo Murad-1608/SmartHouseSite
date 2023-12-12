@@ -33,7 +33,8 @@ builder.Services.AddIdentity<AppUser, AppRole>(options =>
     options.Lockout.MaxFailedAccessAttempts = 3;
 
 
-}).AddEntityFrameworkStores<AppDbContext>();
+}).AddDefaultTokenProviders()
+  .AddEntityFrameworkStores<AppDbContext>();
 
 
 
