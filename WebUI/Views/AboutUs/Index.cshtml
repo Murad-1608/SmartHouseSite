@@ -54,6 +54,13 @@
             object-fit: cover;
         }
 
+        .aboutImage iframe {
+            width: 100%;
+            height: 100%;
+            /*border-radius: 50%;*/
+            object-fit: cover;
+        }
+
     @@media only screen and (max-width: 768px) {
         * {
             margin: 0;
@@ -105,6 +112,13 @@
                 border-radius: 50%;
                 object-fit: cover;
             }
+
+            .aboutImage iframe {
+                width: 100%;
+                height: auto;
+                /*border-radius: 50%;*/
+                object-fit: cover;
+            }
     }
 
     @@media only screen and (max-width: 724px) {
@@ -130,6 +144,11 @@
             width: 333px;
             height: 333px;
         }
+
+        .aboutImage iframe {
+            width: 333px;
+            height: 333px;
+        }
     }
 
     @@media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -147,6 +166,10 @@
         }
 
         .aboutImage img {
+            width: 333px;
+            height: 333px;
+        }
+        .aboutImage iframe {
             width: 333px;
             height: 333px;
         }
