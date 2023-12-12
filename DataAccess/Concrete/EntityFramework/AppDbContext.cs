@@ -16,5 +16,6 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Contact> Contact { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<Portfolio> Portfolios { get; set; }
+        public DbSet<AboutUs> AboutUs { get; set; }
     }
 }
