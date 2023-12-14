@@ -151,7 +151,7 @@ a {
     .title-a {
         font-size: 3rem;
         font-weight: bold;
-        text-transform: uppercase;
+        /*text-transform: uppercase;*/
     }
 
     .subtitle-a {
@@ -422,7 +422,7 @@ a {
         .navbar-b.navbar-trans .nav-link,
         .navbar-b.navbar-reduce .nav-link {
             color: #fff;
-            text-transform: uppercase;
+            /*text-transform: uppercase;*/
             font-weight: 600;
         }
 
@@ -795,7 +795,7 @@ a {
 }
 
     .work-content .w-more {
-        color: #4e4e4e;
+        color: #071E22;
         font-size: .8rem;
     }
 

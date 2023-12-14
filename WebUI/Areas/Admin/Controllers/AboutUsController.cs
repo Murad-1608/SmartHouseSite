@@ -29,7 +29,7 @@ namespace WebUI.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ChangeEmail(AboutUsModel model)
+        public async Task<IActionResult> Update(AboutUsModel model)
         {
             if (!ModelState.IsValid)
             {
