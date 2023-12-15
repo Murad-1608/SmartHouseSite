@@ -102,12 +102,14 @@
     <div class="images" style="margin-top:90px;">
         @foreach (var item in Model)
         {
-            <div class="image">
-                <img src="~/Images/Portfolio/@item.PhotoUrl" alt="Image" />
-                <div class="overlay">
-                    <h3>@item.Name</h3>
+            <a asp-controller="portfolio" asp-action="detail" asp-route-id="@item.Id">
+                <div class="image">
+                    <img src="~/Images/Portfolio/@item.PhotoUrl" alt="Image" />
+                    <div class="overlay">
+                        <h3>@item.Name</h3>
+                    </div>
                 </div>
-            </div>
+            </a>
         }
     </div>
 </body>

@@ -7,5 +7,6 @@ namespace Business.Abstract
         Task Add(Portfolio portfolio);
         Task<List<Portfolio>> GetAll();
         Task Delete(string id);
+        Task<Portfolio> GetDetail(string id);
     }
 }

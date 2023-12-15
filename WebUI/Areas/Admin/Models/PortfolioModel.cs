@@ -7,6 +7,8 @@ namespace WebUI.Areas.Admin.Models
         [Required(ErrorMessage ="Boş keçilə bilməz")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Boş keçilə bilməz")]
+        public string Description { get; set; }
+        [Required(ErrorMessage = "Boş keçilə bilməz")]
         public IFormFile Photo { get; set; }
     }
 }

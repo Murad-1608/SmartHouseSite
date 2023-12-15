@@ -33,5 +33,12 @@ namespace Business.Concrete
 
             return portfolios;
         }
+
+        public async Task<Portfolio> GetDetail(string id)
+        {
+            var value = await portfolioDal.GetAsync(x => x.Id.ToString() == id);
+
+            return value;
+        }
     }
 }

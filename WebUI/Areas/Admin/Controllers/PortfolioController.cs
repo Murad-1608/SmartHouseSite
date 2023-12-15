@@ -37,7 +37,9 @@ namespace WebUI.Areas.Admin.Controllers
             Portfolio portfolio = new()
             {
                 Name = model.Name,
-                PhotoUrl = SystemIOOperations.AddPhoto(model.Photo, "Portfolio")
+                PhotoUrl = SystemIOOperations.AddPhoto(model.Photo, "Portfolio"),
+                Description = model.Description,
+                CreatedDate = DateTime.Now
             };
 
             await portfolioService.Add(portfolio);

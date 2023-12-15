@@ -18,6 +18,13 @@ namespace WebUI.Controllers
             return View(portfolios);
         }
 
-        
+        public async Task<IActionResult> Detail(string id)
+        {
+            var value = await portfolioService.GetDetail(id);
+
+            return View(value);
+        }
+
+
     }
 }

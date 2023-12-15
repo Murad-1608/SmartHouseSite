@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #071E22;
+}
+
+.primary-color {
+    color: #008AC4;
+}
+
+.bold-color {
+    color: #222222;
+}
+
+.gorulen-detail-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.gorulen-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gorulen-about {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-text,
+.right-text {
+    margin: 20px 0;
+}
+
+.left-text {
+    width: 100%;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-bottom: 5px solid #008AC4;
+}
+
+.right-text {
+    padding: 0 15px;
+}
+
+.portfolio-info-box {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid #eee;
+}
+
+.portfolio-info-box:nth-child(3) {
+    border-bottom: none;
+}
+
+.portfolio-info-box h6 {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.portfolio-info-box i {
+    padding-right: 10px;
+}
+
+.portfolio-term {
+    font-size: 16px;
+}
+
+.padding-right {
+    padding-right: 10px;
+    line-height: 28px;
+}
+
+.right-text .line {
+    width: 25px;
+    margin-bottom: 10px;
+}
+
+.right-text .text {
+    font-size: 14px;
+    color: #8F8F8F;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+}
+
+.about-project {
+    font-size: 20px;
+    color: white;
+    /* margin-top: 20px; */
+}
+
+.gorulen-title {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    margin: 20px 0;
+}
+
+.gorulen-image {
+    max-width: 100%;
+}
+
+/* Media Query for Tablets */
+@media only screen and (min-width: 768px) {
+    .gorulen-about {
+        flex-direction: row;
+    }
+
+    .left-text {
+        width: 270px;
+    }
+}
+
+/* Media Query for Desktops */
+@media only screen and (min-width: 1200px) {
+    .gorulen-detail-container {
+        padding: 0;
+        /* Reset the padding for larger screens */
+    }
+
+    .gorulen-title {
+        font-size: 32px;
+    }
+}

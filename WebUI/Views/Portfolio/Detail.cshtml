@@ -1,0 +1,39 @@
+﻿@model Entity.Concrete.Portfolio
+@{
+    ViewData["Title"] = Model.Name;
+}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="~/PortfolioDetail/gorulen-detail.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+<div class="gorulen-detail-container">
+    <h1 class="gorulen-title">@Model.Name</h1>
+    <div class="gorulen-image">
+        <img src="~/Images/Portfolio/@Model.PhotoUrl" alt="">
+    </div>
+    <div class="gorulen-about">
+
+        <div class="left-text">
+            <div class="portfolio-info-box">
+                <h6 class="padding-right"><i class="fa fa-briefcase primary-color"></i>İnvestor Adı:</h6>
+                <div class="portfolio-term bold-color">Smart Systems</div>
+            </div>
+            <div class="portfolio-info-box">
+                <h6 class="padding-right"><i class="fa fa-calendar primary-color"></i>Nəşr tarixi:</h6>
+                <div class="portfolio-term bold-color">@Model.CreatedDate.ToString("MM/dd/yyyy")</div>
+            </div>
+            <div class="portfolio-info-box">
+                <h6 class="padding-right"><i class="fa fa-map-marker primary-color"></i>Yerləşmə:</h6>
+                <div class="portfolio-term bold-color">Azerbaijan</div>
+            </div>
+        </div>
+        <div class="right-text">
+            <h5 class="about-project">LAYİHƏ HAQQINDA</h5>
+            <span class="line"></span>
+            <p class="text">
+                @Model.Description
+            </p>
+        </div>
+    </div>
+</div>
