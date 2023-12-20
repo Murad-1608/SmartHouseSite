@@ -59,7 +59,7 @@ namespace Business.Concrete
         public async Task<List<Product>> GetAllWithCategory()
         {
             var product = await productDal.GetAllWithCategoryAsync();
-
+            product.Reverse();
             return product;
         }
 

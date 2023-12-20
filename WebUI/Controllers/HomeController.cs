@@ -11,13 +11,16 @@ namespace WebUI.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IProductService productService;
         private readonly IPortfolioService portfolioService;
+        private readonly IContactService contactService;
         public HomeController(ILogger<HomeController> logger,
                               IProductService productService,
-                              IPortfolioService portfolioService)
+                              IPortfolioService portfolioService,
+                              IContactService contactService)
         {
             _logger = logger;
             this.productService = productService;
             this.portfolioService = portfolioService;
+            this.contactService = contactService;
         }
 
         public async Task<IActionResult> Index()
@@ -25,10 +28,9 @@ namespace WebUI.Controllers
             HomeViewModel viewModel = new()
             {
                 Products = productService.Last3Product(),
-                Portfolio = await portfolioService.GetAll()
+                Portfolio = await portfolioService.GetAll(),
+                Contact = contactService.Get()
             };
-            var last3Products = productService.Last3Product();
-
             return View(viewModel);
         }
 

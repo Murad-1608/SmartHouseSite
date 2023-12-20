@@ -39,7 +39,7 @@ namespace WebUI.Areas.Admin.Controllers
                 Name = model.Name,
                 PhotoUrl = SystemIOOperations.AddPhoto(model.Photo, "Portfolio"),
                 Description = model.Description,
-                CreatedDate = DateTime.Now
+                CreatedDate = model.Date
             };
 
             await portfolioService.Add(portfolio);

@@ -6,5 +6,6 @@ namespace WebUI.Models.ViewModels
     {
         public List<Product> Products { get; set; }
         public List<Portfolio> Portfolio { get; set; }
+        public Contact Contact { get; set; }
     }
 }

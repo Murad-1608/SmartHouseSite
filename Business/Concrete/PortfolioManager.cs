@@ -31,6 +31,7 @@ namespace Business.Concrete
         {
             var portfolios = await portfolioDal.GetAllAsync();
 
+            portfolios.Reverse();
             return portfolios;
         }
 
