@@ -60,6 +60,7 @@ namespace Business.Concrete
         {
             var product = await productDal.GetAllWithCategoryAsync();
             product.Reverse();
+
             return product;
         }
 

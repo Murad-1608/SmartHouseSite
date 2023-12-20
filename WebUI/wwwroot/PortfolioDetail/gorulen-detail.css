@@ -20,7 +20,8 @@
 
 .gorulen-image img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 .gorulen-about {
@@ -106,7 +107,8 @@
 }
 
 .gorulen-image {
-    max-width: 100%;
+    max-width: 633px;
+    max-height: 433px;
 }
 
 /* Media Query for Tablets */
