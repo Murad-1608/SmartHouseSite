@@ -8,7 +8,7 @@ namespace DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=sql5110.site4now.net; Database=db_aa1d14_smartsystem; Integrated Security=false; user id=  db_aa1d14_smartsystem_admin; password=Murad.123");
+            optionsBuilder.UseSqlServer(@"Server=sql5110.site4now.net; Database=db_aa1d14_smartsystem; Integrated Security=false; user id=  Admin; password=Privacy");
         }
 
         public DbSet<Product> Products { get; set; }

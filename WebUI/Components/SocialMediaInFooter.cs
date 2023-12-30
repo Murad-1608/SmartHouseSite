@@ -12,9 +12,11 @@ namespace WebUI.Components
             this.contactService = contactService;
         }
 
-        public IActionResult Invoke()
+        public IViewComponentResult Invoke()
         {
-            return View();
+            var contact = contactService.Get();
+
+            return View(contact);
         }
     }
 }

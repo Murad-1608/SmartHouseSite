@@ -13,23 +13,23 @@ namespace Business.DependencyResolvers.Autofac
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<CategoryManager>().As<ICategoryService>();
-            builder.RegisterType<EfCategoryDal>().As<ICategoryDal>();
+            builder.RegisterType<CategoryManager>().As<ICategoryService>().SingleInstance();
+            builder.RegisterType<EfCategoryDal>().As<ICategoryDal>().SingleInstance(); 
 
-            builder.RegisterType<EfProductDal>().As<IProductDal>();
-            builder.RegisterType<ProductManager>().As<IProductService>();
+            builder.RegisterType<EfProductDal>().As<IProductDal>().SingleInstance();
+            builder.RegisterType<ProductManager>().As<IProductService>().SingleInstance();
 
-            builder.RegisterType<EfContactDal>().As<IContactDal>();
-            builder.RegisterType<ContactManager>().As<IContactService>();
+            builder.RegisterType<EfContactDal>().As<IContactDal>().SingleInstance();
+            builder.RegisterType<ContactManager>().As<IContactService>().SingleInstance();
 
-            builder.RegisterType<EfImageDal>().As<IImageDal>();
-            builder.RegisterType<ImageManager>().As<IImageService>();
+            builder.RegisterType<EfImageDal>().As<IImageDal>().SingleInstance();
+            builder.RegisterType<ImageManager>().As<IImageService>().SingleInstance();
 
-            builder.RegisterType<EfPortfolioDal>().As<IPortfolioDal>();
-            builder.RegisterType<PortfolioManager>().As<IPortfolioService>();
+            builder.RegisterType<EfPortfolioDal>().As<IPortfolioDal>().SingleInstance();
+            builder.RegisterType<PortfolioManager>().As<IPortfolioService>().SingleInstance();
 
-            builder.RegisterType<EfAboutUsDal>().As<IAboutUsDal>();
-            builder.RegisterType<AboutUsManager>().As<IAboutUsService>();
+            builder.RegisterType<EfAboutUsDal>().As<IAboutUsDal>().SingleInstance();
+            builder.RegisterType<AboutUsManager>().As<IAboutUsService>().SingleInstance();
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
